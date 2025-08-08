@@ -1,60 +1,61 @@
 # 🚀 Local Knowledge Base - 本地知识库AI助手
 
-> 一个基于DeepSeek AI的本地文档智能问答系统，保护隐私的同时享受AI服务
+> 一个零门槛的本地文档智能问答系统，让普通用户也能轻松搭建个人知识库
 
-## 💡 创作初衷
+## 💡 项目背景
 
-项目灵感源于我配置本地知识库的实际体验。我之前想在Chatbox上配置MCP来关联本地知识库和AI模型对话，希望能快速了解文件内容。虽然跟着教程完成了配置，但整个过程涉及代码操作，还是花了不少时间。
+项目灵感源于我配置本地知识库的实际体验。我之前想尝试在Chatbox上配置MCP来关联本地知识库和模型对话，本意是想方便快速了解文件内容。当时跟着教程，整个过程因为涉及代码配置还是花了一点时间。
 
-这个经历让我思考：**如果普通用户想搭建本地知识库，这个过程会不会太复杂？**
+这个经历让我思考：**如果普通用户想给自己搞这个本地知识库会不会很复杂？**
 
-某天早上6点醒来时，一个想法突然闪现：能不能把这个流程极大简化？做成软件包的形式，用户在自己电脑里上传文件，和模型对话就行，很傻瓜化，也不用懂代码或MCP配置，最多给个用户手册教怎么获取API Key。
+能不能把这个流程简化呢？做成一个软件包的形式，用户可以在自己电脑里上传自己的文件、和模型对话，很傻瓜化，也不用会什么代码或者MCP，最多给他一个用户手册获取API Key，现在免费Key其实也挺多的。
 
-心动不如行动！我立即和Claude Code开启协作，从早上聊到中午，完成了这个MVP。
+某天早上6点醒来想到这个想法，那段时间正好在玩Claude Code，就心动不如行动了，直接开聊，从早上一直聊到中午，然后直接在GitHub上上传了项目，算是我作为产品经理的一个MVP。
 
-现在开源分享给社区，因为我的代码能力有限，希望厉害的程序员们能在此基础上玩出更酷的东西。**这是我从想法到落地的一次有意义尝试！** 🎯
+上传到GitHub主要是因为我本身代码能力还是有上限，肯定有些厉害的程序员能玩出更酷的东西，就分享出来了。**这个经历对我来说也是从想法到落地的一次有意义的尝试。**
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)]()
 
-## ✨ 特性
+## ✨ 核心特性
 
-🎯 **零门槛使用** - 无需配置MCP或编程知识，下载即用  
-📁 **Word文档支持** - 专门针对Word文档(.doc, .docx)优化  
-🤖 **智能问答** - 基于DeepSeek AI，理解文档内容并智能回答  
-🔒 **隐私安全** - 文档完全本地处理，只有AI对话内容发送给API  
-⚡ **快速响应** - 本地索引，秒级文档检索  
+🎯 **零门槛使用** - 无需配置MCP、编程知识或复杂环境，下载即用  
+📁 **Word文档支持** - 专门优化Word文档(.doc, .docx)解析  
+🤖 **DeepSeek驱动** - 基于DeepSeek AI模型的智能问答  
+💻 **傻瓜式操作** - 图形化界面，只需粘贴API Key即可开始  
+🔒 **隐私安全** - 文档完全本地处理，数据不上传云端  
 🆓 **完全免费** - 开源项目，仅需免费的DeepSeek API Key
 
 ## 📸 软件演示
 
 ### 界面展示
 ![功能演示1](screenshots/demo1.png)
-*配置界面：设置DeepSeek API Key*
+*配置界面：只需粘贴DeepSeek API Key*
 
 ![功能演示2](screenshots/demo2.png)
-*文档选择：支持Word文档格式*
+*文件选择：支持本地文件夹选择*
 
 ![功能演示3](screenshots/demo3.png)
-*智能问答：基于DeepSeek AI理解Word文档内容并回答问题*
+*智能问答：直接和你的Word文档对话*
 
-> 💡 **使用流程**: 配置DeepSeek API Key → 选择Word文档 → AI智能问答
+> 💡 **使用流程**: 下载exe → 粘贴API Key → 选择文件夹 → 开始对话
 
 ## 🚀 快速开始
 
-### 方式一：直接运行（推荐）
+### 方式一：一键使用（推荐）
 
-1. 下载 [最新发布版本](releases/v1.0/本地知识库.exe)
-2. 双击运行 `本地知识库.exe`
-3. 配置DeepSeek API Key
-4. 选择文档文件夹开始使用
+1. 下载 [本地知识库.exe](releases/v1.0/本地知识库.exe)
+2. 双击运行程序
+3. 获取并粘贴DeepSeek API Key
+4. 选择包含Word文档的文件夹
+5. 开始和你的文档对话！
 
 ### 方式二：从源码运行
 
 1. 克隆项目
 ```bash
-git clone https://github.com/yourusername/local-knowledge-base.git
+git clone https://github.com/qianyangyang-cloud/local-knowledge-base.git
 cd local-knowledge-base
 ```
 
@@ -68,70 +69,60 @@ pip install -r requirements.txt
 python src/local-knowledge-base.py
 ```
 
-## 🔑 API Key 获取
+## 🔑 获取免费API Key
 
-1. 访问 [DeepSeek Platform](https://platform.deepseek.com/)
-2. 注册并登录账户
-3. 创建API Key
-4. 在软件中配置使用
+1. 访问 [DeepSeek开放平台](https://platform.deepseek.com/)
+2. 注册账户（支持手机号注册）
+3. 在控制台创建API Key
+4. 复制Key到软件中使用
 
-## 📁 支持的文件格式
+> 💰 **费用说明**: DeepSeek提供免费额度，日常使用完全够用
+
+## 📁 当前支持格式
 
 - **Word文档**: `.doc`, `.docx`
 
-> 🔧 **扩展计划**: 未来版本将支持更多格式（PDF、TXT、代码文件等），欢迎贡献代码！
+> 🚧 **开发计划**: 欢迎贡献代码支持更多格式（PDF、TXT、Markdown等）
 
-## 🛠️ 构建说明
+## 🛠️ 技术架构
 
-如果你想自己打包exe文件：
+- **前端**: Python + tkinter（原生GUI）
+- **后端**: 本地文档解析 + DeepSeek API
+- **打包**: PyInstaller单文件部署
+- **支持**: Windows 10/11
 
-```bash
-# 安装打包依赖
-pip install pyinstaller
+## 💡 设计理念
 
-# Windows用户可直接运行
-scripts/打包程序.bat
+**问题**：现有本地知识库方案对普通用户太复杂  
+**解决**：将MCP配置简化为"下载-粘贴Key-选择文件夹"三步  
+**目标**：让每个人都能拥有自己的本地AI助手  
 
-# 或者手动打包
-pyinstaller build/build.spec
-```
+## 🤝 开源贡献
 
-## 💡 使用技巧
+这个项目是我从想法到落地的一次尝试，由于个人代码能力有限，特别欢迎：
 
-- 📂 选择包含Word文档的文件夹进行批量分析
-- 🎯 提问时越具体，DeepSeek AI回答越准确  
-- 🔍 支持中英文Word文档和对话
-- 💾 文档内容会被缓存，重复使用更快
+- 🔧 功能扩展（支持更多文件格式）
+- 🎨 界面优化
+- 🚀 性能提升
+- 📱 跨平台适配
 
-## 🤝 贡献
+1. Fork这个项目
+2. 创建特性分支
+3. 提交你的改进
+4. 发起Pull Request
 
-欢迎提交 Issue 和 Pull Request！
+## 📄 开源协议
 
-1. Fork 这个项目
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+MIT License - 可自由使用、修改和分发
 
 ## 🙏 致谢
 
-- [DeepSeek](https://platform.deepseek.com/) - 提供强大的AI能力
-- [Claude Code](https://claude.ai/code) - 开发过程中的AI编程助手
-- [PyInstaller](https://pyinstaller.org/) - Python打包工具
-- [tkinter](https://docs.python.org/3/library/tkinter.html) - GUI框架
-
-**特别感谢** Claude Code 让从想法到产品的实现如此流畅，3小时完成MVP的背后是AI辅助开发的力量！
-
-## 📞 联系方式
-
-如果你觉得这个项目有用，请给个 ⭐ Star 支持一下！
-
-有问题可以提 Issue 或联系开发者。
+- **DeepSeek**: 提供强大且免费的AI能力
+- **Claude Code**: AI协作开发的强大伙伴
+- **开源社区**: 期待大家的贡献和建议
 
 ---
 
-**🌟 如果这个项目对你有帮助，别忘了点个 Star！**
+**如果这个项目对你有帮助，请给个 ⭐ Star 支持一下！**
+
+有问题可以提Issue，让我们一起让本地知识库更简单易用！
