@@ -19,19 +19,25 @@
 ## ✨ 特性
 
 🔒 **隐私安全** - 文档完全本地处理，只有AI对话内容发送给API  
-📁 **多格式支持** - 支持 Word、PDF、代码文件、文本等多种格式  
+📁 **Word文档支持** - 专门针对Word文档(.doc, .docx)优化  
 🤖 **智能问答** - 基于DeepSeek AI，理解文档内容并智能回答  
 🎯 **简单易用** - 图形化界面，无需技术背景即可使用  
 ⚡ **快速响应** - 本地索引，秒级文档检索  
 🆓 **完全免费** - 开源项目，仅需DeepSeek API费用
 
-## 📹 软件演示
+## 📸 软件演示
 
-> 📹 **完整演示视频**: [本地知识库demo.mp4](screenshots/本地知识库demo.mp4)
+### 界面展示
+![功能演示1](screenshots/demo1.png)
+*配置界面：设置DeepSeek API Key*
 
-![演示视频](screenshots/本地知识库demo.mp4)
+![功能演示2](screenshots/demo2.png)
+*文档选择：支持Word文档格式*
 
-*视频展示了完整的使用流程：配置API Key → 选择文档 → AI智能问答*
+![功能演示3](screenshots/demo3.png)
+*智能问答：基于DeepSeek AI理解Word文档内容并回答问题*
+
+> 💡 **使用流程**: 配置DeepSeek API Key → 选择Word文档 → AI智能问答
 
 ## 🚀 快速开始
 
@@ -69,10 +75,9 @@ python src/local-knowledge-base.py
 
 ## 📁 支持的文件格式
 
-- **文档类型**: `.txt`, `.md`, `.doc`, `.docx`
-- **代码文件**: `.py`, `.js`, `.java`, `.cpp`, `.c`, `.html`, `.css`
-- **配置文件**: `.json`, `.xml`, `.yaml`, `.yml`, `.ini`, `.cfg`
-- **日志文件**: `.log`
+- **Word文档**: `.doc`, `.docx`
+
+> 🔧 **扩展计划**: 未来版本将支持更多格式（PDF、TXT、代码文件等），欢迎贡献代码！
 
 ## 🛠️ 构建说明
 
@@ -91,9 +96,9 @@ pyinstaller build/build.spec
 
 ## 💡 使用技巧
 
-- 📂 选择包含多个文档的文件夹进行批量分析
-- 🎯 提问时越具体，AI回答越准确
-- 🔍 支持中英文文档和对话
+- 📂 选择包含Word文档的文件夹进行批量分析
+- 🎯 提问时越具体，DeepSeek AI回答越准确  
+- 🔍 支持中英文Word文档和对话
 - 💾 文档内容会被缓存，重复使用更快
 
 ## 🤝 贡献
